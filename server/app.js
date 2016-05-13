@@ -12,14 +12,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 var cats = ['Kris', 'Luna', 'Rubio'];
 
 //ROUTES
-app.get('/felines', function(req, res) {
-  res.send(cats);
-});
 
-app.post('/felines', function(req, res) {
-  cats.push(req.body.catName);
-  res.send(true);
-});
 
 app.use('/', index);
 
